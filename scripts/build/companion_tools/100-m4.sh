@@ -18,7 +18,8 @@ do_companion_tools_m4_for_build()
         host=${CT_BUILD} \
         prefix="${CT_BUILD_COMPTOOLS_DIR}" \
         cflags="${CT_CFLAGS_FOR_BUILD}" \
-        ldflags="${CT_LDFLAGS_FOR_BUILD}"
+        ldflags="${CT_LDFLAGS_FOR_BUILD}" \
+        libs="${M4_BUILD_LIBS}"
     CT_Popd
     CT_EndStep
 }
@@ -31,7 +32,8 @@ do_companion_tools_m4_for_host()
         host=${CT_HOST} \
         prefix="${CT_PREFIX_DIR}" \
         cflags="${CT_CFLAGS_FOR_HOST}" \
-        ldflags="${CT_LDFLAGS_FOR_HOST}"
+        ldflags="${CT_LDFLAGS_FOR_HOST}" \
+        libs="${M4_HOST_LIBS}"
     CT_Popd
     CT_EndStep
 }

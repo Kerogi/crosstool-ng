@@ -1,3 +1,17 @@
 # GNU m4
 
 ## default y if !CONFIGURE_has_gnu_m4_1_4_12_or_newer
+
+config M4_HOST_LIBS
+    string "extra libs for M4 on host"
+    depends on LIBC_MINGW_W64
+    default "-lssp" if LIBC_MINGW_W64
+    help
+        Extra libs to link building for host.
+
+config M4_BUILD_LIBS
+    string "extra libs for M4 on build"
+    depends on LIBC_MINGW_W64
+    default "-lssp" if LIBC_MINGW_W64
+    help
+        Extra libs to link building for build.
